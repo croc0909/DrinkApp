@@ -13,6 +13,13 @@
 		425D6F2728B4ACD200A0E1DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425D6F2528B4ACD200A0E1DA /* Main.storyboard */; };
 		425D6F2928B4ACD300A0E1DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425D6F2828B4ACD300A0E1DA /* Assets.xcassets */; };
 		425D6F2C28B4ACD300A0E1DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425D6F2A28B4ACD300A0E1DA /* LaunchScreen.storyboard */; };
+		425D6F3428B4B04500A0E1DA /* DrinkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D6F3328B4B04500A0E1DA /* DrinkListViewController.swift */; };
+		425D6F3628B4B10300A0E1DA /* DrinkListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D6F3528B4B10300A0E1DA /* DrinkListCell.swift */; };
+		425D6F3A28B4BEFE00A0E1DA /* DrinkListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D6F3928B4BEFE00A0E1DA /* DrinkListModel.swift */; };
+		4292E72228B5B15C00BE304E /* DrinkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292E72128B5B15C00BE304E /* DrinkDetailViewController.swift */; };
+		4292E72428B5B4F800BE304E /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292E72328B5B4F800BE304E /* FrontPageViewController.swift */; };
+		4292E72628B5BB5200BE304E /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292E72528B5BB5200BE304E /* ActivityTableViewCell.swift */; };
+		4297F13428B713F90076CB83 /* DrinkDetaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297F13328B713F80076CB83 /* DrinkDetaiCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		425D6F2828B4ACD300A0E1DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		425D6F2B28B4ACD300A0E1DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		425D6F2D28B4ACD300A0E1DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		425D6F3328B4B04500A0E1DA /* DrinkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListViewController.swift; sourceTree = "<group>"; };
+		425D6F3528B4B10300A0E1DA /* DrinkListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListCell.swift; sourceTree = "<group>"; };
+		425D6F3928B4BEFE00A0E1DA /* DrinkListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListModel.swift; sourceTree = "<group>"; };
+		4292E72128B5B15C00BE304E /* DrinkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailViewController.swift; sourceTree = "<group>"; };
+		4292E72328B5B4F800BE304E /* FrontPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
+		4292E72528B5BB5200BE304E /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		4297F13328B713F80076CB83 /* DrinkDetaiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetaiCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +54,8 @@
 		425D6F1328B4ACD200A0E1DA = {
 			isa = PBXGroup;
 			children = (
+				425D6F3828B4B12400A0E1DA /* Model */,
+				425D6F3728B4B11300A0E1DA /* View */,
 				425D6F1E28B4ACD200A0E1DA /* DrinkApp */,
 				425D6F1D28B4ACD200A0E1DA /* Products */,
 			);
@@ -60,11 +76,32 @@
 				425D6F2128B4ACD200A0E1DA /* SceneDelegate.swift */,
 				425D6F2328B4ACD200A0E1DA /* ViewController.swift */,
 				425D6F2528B4ACD200A0E1DA /* Main.storyboard */,
+				4292E72328B5B4F800BE304E /* FrontPageViewController.swift */,
+				4292E72528B5BB5200BE304E /* ActivityTableViewCell.swift */,
+				425D6F3328B4B04500A0E1DA /* DrinkListViewController.swift */,
+				4292E72128B5B15C00BE304E /* DrinkDetailViewController.swift */,
 				425D6F2828B4ACD300A0E1DA /* Assets.xcassets */,
 				425D6F2A28B4ACD300A0E1DA /* LaunchScreen.storyboard */,
 				425D6F2D28B4ACD300A0E1DA /* Info.plist */,
 			);
 			path = DrinkApp;
+			sourceTree = "<group>";
+		};
+		425D6F3728B4B11300A0E1DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				425D6F3528B4B10300A0E1DA /* DrinkListCell.swift */,
+				4297F13328B713F80076CB83 /* DrinkDetaiCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		425D6F3828B4B12400A0E1DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				425D6F3928B4BEFE00A0E1DA /* DrinkListModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +176,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				425D6F2428B4ACD200A0E1DA /* ViewController.swift in Sources */,
+				425D6F3628B4B10300A0E1DA /* DrinkListCell.swift in Sources */,
+				4297F13428B713F90076CB83 /* DrinkDetaiCell.swift in Sources */,
 				425D6F2028B4ACD200A0E1DA /* AppDelegate.swift in Sources */,
 				425D6F2228B4ACD200A0E1DA /* SceneDelegate.swift in Sources */,
+				425D6F3A28B4BEFE00A0E1DA /* DrinkListModel.swift in Sources */,
+				4292E72428B5B4F800BE304E /* FrontPageViewController.swift in Sources */,
+				4292E72228B5B15C00BE304E /* DrinkDetailViewController.swift in Sources */,
+				425D6F3428B4B04500A0E1DA /* DrinkListViewController.swift in Sources */,
+				4292E72628B5BB5200BE304E /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
