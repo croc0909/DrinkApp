@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420B15BC28BE0574000B583B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 420B15BB28BE0574000B583B /* Kingfisher */; };
+		4228106128D04EB400C32CFC /* APIClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4228106028D04EB400C32CFC /* APIClass.swift */; };
 		425D6F2028B4ACD200A0E1DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D6F1F28B4ACD200A0E1DA /* AppDelegate.swift */; };
 		425D6F2228B4ACD200A0E1DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D6F2128B4ACD200A0E1DA /* SceneDelegate.swift */; };
 		425D6F2428B4ACD200A0E1DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D6F2328B4ACD200A0E1DA /* ViewController.swift */; };
@@ -20,9 +22,11 @@
 		4292E72428B5B4F800BE304E /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292E72328B5B4F800BE304E /* FrontPageViewController.swift */; };
 		4292E72628B5BB5200BE304E /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292E72528B5BB5200BE304E /* ActivityTableViewCell.swift */; };
 		4297F13428B713F90076CB83 /* DrinkDetaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297F13328B713F80076CB83 /* DrinkDetaiCell.swift */; };
+		42B97B5828BF598B00D0BDE0 /* DrinkOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B97B5728BF598B00D0BDE0 /* DrinkOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4228106028D04EB400C32CFC /* APIClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClass.swift; sourceTree = "<group>"; };
 		425D6F1C28B4ACD200A0E1DA /* DrinkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425D6F1F28B4ACD200A0E1DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		425D6F2128B4ACD200A0E1DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,7 @@
 		4292E72328B5B4F800BE304E /* FrontPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
 		4292E72528B5BB5200BE304E /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		4297F13328B713F80076CB83 /* DrinkDetaiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetaiCell.swift; sourceTree = "<group>"; };
+		42B97B5728BF598B00D0BDE0 /* DrinkOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +50,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				420B15BC28BE0574000B583B /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4228106228D04F7300C32CFC /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				4228106028D04EB400C32CFC /* APIClass.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		4228106328D04F8B00C32CFC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4292E72328B5B4F800BE304E /* FrontPageViewController.swift */,
+				425D6F3328B4B04500A0E1DA /* DrinkListViewController.swift */,
+				4292E72128B5B15C00BE304E /* DrinkDetailViewController.swift */,
+				42B97B5728BF598B00D0BDE0 /* DrinkOrderViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		425D6F1328B4ACD200A0E1DA = {
 			isa = PBXGroup;
 			children = (
 				425D6F3828B4B12400A0E1DA /* Model */,
 				425D6F3728B4B11300A0E1DA /* View */,
+				4228106228D04F7300C32CFC /* Class */,
+				4228106328D04F8B00C32CFC /* Controller */,
 				425D6F1E28B4ACD200A0E1DA /* DrinkApp */,
 				425D6F1D28B4ACD200A0E1DA /* Products */,
 			);
@@ -76,10 +103,6 @@
 				425D6F2128B4ACD200A0E1DA /* SceneDelegate.swift */,
 				425D6F2328B4ACD200A0E1DA /* ViewController.swift */,
 				425D6F2528B4ACD200A0E1DA /* Main.storyboard */,
-				4292E72328B5B4F800BE304E /* FrontPageViewController.swift */,
-				4292E72528B5BB5200BE304E /* ActivityTableViewCell.swift */,
-				425D6F3328B4B04500A0E1DA /* DrinkListViewController.swift */,
-				4292E72128B5B15C00BE304E /* DrinkDetailViewController.swift */,
 				425D6F2828B4ACD300A0E1DA /* Assets.xcassets */,
 				425D6F2A28B4ACD300A0E1DA /* LaunchScreen.storyboard */,
 				425D6F2D28B4ACD300A0E1DA /* Info.plist */,
@@ -92,6 +115,7 @@
 			children = (
 				425D6F3528B4B10300A0E1DA /* DrinkListCell.swift */,
 				4297F13328B713F80076CB83 /* DrinkDetaiCell.swift */,
+				4292E72528B5BB5200BE304E /* ActivityTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +144,9 @@
 			dependencies = (
 			);
 			name = DrinkApp;
+			packageProductDependencies = (
+				420B15BB28BE0574000B583B /* Kingfisher */,
+			);
 			productName = DrinkApp;
 			productReference = 425D6F1C28B4ACD200A0E1DA /* DrinkApp.app */;
 			productType = "com.apple.product-type.application";
@@ -148,6 +175,9 @@
 				Base,
 			);
 			mainGroup = 425D6F1328B4ACD200A0E1DA;
+			packageReferences = (
+				420B15BA28BE0574000B583B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 425D6F1D28B4ACD200A0E1DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,9 +210,11 @@
 				4297F13428B713F90076CB83 /* DrinkDetaiCell.swift in Sources */,
 				425D6F2028B4ACD200A0E1DA /* AppDelegate.swift in Sources */,
 				425D6F2228B4ACD200A0E1DA /* SceneDelegate.swift in Sources */,
+				42B97B5828BF598B00D0BDE0 /* DrinkOrderViewController.swift in Sources */,
 				425D6F3A28B4BEFE00A0E1DA /* DrinkListModel.swift in Sources */,
 				4292E72428B5B4F800BE304E /* FrontPageViewController.swift in Sources */,
 				4292E72228B5B15C00BE304E /* DrinkDetailViewController.swift in Sources */,
+				4228106128D04EB400C32CFC /* APIClass.swift in Sources */,
 				425D6F3428B4B04500A0E1DA /* DrinkListViewController.swift in Sources */,
 				4292E72628B5BB5200BE304E /* ActivityTableViewCell.swift in Sources */,
 			);
@@ -400,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		420B15BA28BE0574000B583B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		420B15BB28BE0574000B583B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 420B15BA28BE0574000B583B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 425D6F1428B4ACD200A0E1DA /* Project object */;
 }

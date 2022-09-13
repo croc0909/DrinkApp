@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DrinkListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -17,7 +18,9 @@ class DrinkListViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     var drinkData = [StoreItem]() // 空資料
     var drinkClassification = [String]() // 飲料類別
-
+    var drinkClassUrl = [URL]()
+    var drinkDataToNextPage = [StoreItem]() // 空資料
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getUrl()
@@ -26,6 +29,9 @@ class DrinkListViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func getUrl(){
+        
+        let urlClass = getUrlResponse(url: airtableUrl, apiKey: apiKey, header: httpHeaderField)
+        
         let url = URL(string: airtableUrl)!
         var request = URLRequest(url: url)
         // 設定 apiKey
@@ -52,32 +58,36 @@ class DrinkListViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func updateMenu(){
-        print("\(drinkData.count)")
-        print("drinkClassification \(drinkClassification.count)")
+        //print("\(drinkData)")
         for i in 0...(drinkData.count - 1){
-            print("\(i) \(drinkData[i].fields.Classification)")
+            //print("\(i) \(drinkData[i].fields.Classification)")
             
             if(drinkClassification.count == 0){
                 drinkClassification.append(drinkData[i].fields.Classification)
+                drinkClassUrl.append(drinkData[i].fields.image[0].url)
             }
             else{
                 for x in 0...(drinkClassification.count - 1){ // 檢查是否有相同飲料類別
-                    print("Class \(drinkClassification[x]) Data \(drinkData[i].fields.Classification)")
+                    //print("Class \(drinkClassification[x]) Data \(drinkData[i].fields.Classification)")
                     if(drinkClassification[x] == drinkData[i].fields.Classification){
                         break
                     }
                     else{
                         drinkClassification.append(drinkData[i].fields.Classification)
+                        drinkClassUrl.append(drinkData[i].fields.image[0].url)
+                        //print(" Class \(drinkClassification)")
+                        //print(" image \(drinkClassUrl)")
                         break
                     }
                 }
             }
         }
-        
+        //print(" Class \(drinkClassification)")
+        //print(" image \(drinkClassUrl)")
         DispatchQueue.main.async { // 畫面更新
             self.drinkListTableView.reloadData()
         }
-        print("drinkClassification \(drinkClassification)")
+        //print("drinkClassification \(drinkClassification)")
     }
     
     func tableViewInit(){
@@ -91,18 +101,29 @@ class DrinkListViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DrinkListCell", for: indexPath) as! DrinkListCell
-        cell.productImageView.image = UIImage(named: "摩卡")
+        cell.productImageView.kf.setImage(with: drinkClassUrl[indexPath.row])
+        cell.productImageView.layer.cornerRadius = cell.productImageView.frame.size.height/2 // 圓角
         cell.productNameLael.text = drinkClassification[indexPath.row]
         return cell
         
     }
     
-    
-    @IBSegueAction func toDrinkDetailSegueAction(_ coder: NSCoder) -> DrinkDetailViewController? {
-        return nil/*DrinkDetailViewController(coder: coder,type: DrinkDetail)*/
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //print("點到 \(indexPath.row) \(drinkClassification[indexPath.row])")
+        drinkDataToNextPage = [StoreItem]() // 每次選擇前清空資料
+        for i in 0...(drinkData.count - 1){
+            if(drinkData[i].fields.Classification == drinkClassification[indexPath.row] ){
+                //print(drinkData[i].fields)
+                drinkDataToNextPage.append(drinkData[i])
+            }
+        }
+        //print("drinkDataToNextPage \(drinkDataToNextPage)")
+        performSegue(withIdentifier: "toDrinkDetailViewSegue", sender: nil) // 跳頁
     }
     
-
+    @IBSegueAction func toDrinkDetailSegueAction(_ coder: NSCoder) -> DrinkDetailViewController? {
+        return DrinkDetailViewController(coder: coder,data: drinkDataToNextPage)
+    }
     /*
     // MARK: - Navigation
 
