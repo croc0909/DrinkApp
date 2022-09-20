@@ -30,7 +30,7 @@ class DrinkListViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func getUrl(){
         
-        let urlClass = getUrlResponse(url: airtableUrl, apiKey: apiKey, header: httpHeaderField)
+        //let urlClass = getUrlResponse(url: airtableUrl, apiKey: apiKey, header: httpHeaderField)
         
         let url = URL(string: airtableUrl)!
         var request = URLRequest(url: url)
@@ -54,7 +54,6 @@ class DrinkListViewController: UIViewController,UITableViewDelegate,UITableViewD
                 }
             }
         }.resume()
-        
     }
     
     func updateMenu(){

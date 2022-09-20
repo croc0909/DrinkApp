@@ -62,3 +62,34 @@ struct drinkOrder{
     }
 }
 
+struct userOrder{
+    var drinkName:String
+    var size:String
+    var price:String
+    var caffeine:String
+    var heat:String
+    var sugar:String
+    var drinkImage:URL
+    var quantity:String
+}
+
+// 暫存用
+var userOrderList = Array<userOrder>()
+
+// 上傳用
+struct Order:Codable{
+    var records:[Records]
+    struct Records:Codable{
+        var fields:Fields
+        struct Fields:Codable{
+            var drinkName:String
+            var size:String
+            var price:String
+            var caffeine:String
+            var heat:String
+            var sugar:String
+            var drinkImage:URL
+            var quantity:String
+        }
+    }
+}

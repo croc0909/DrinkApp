@@ -20,16 +20,30 @@ class DrinkOrderViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var drinkOrderScrollView: UIScrollView!
     @IBOutlet weak var scrollContentView: UIView!
-    
     @IBOutlet weak var drinkSizeScrollView: UIScrollView!
     
-    //var drinkData = drinkOrder(drinkImage: http, drinkName: "", drinkInformation: "") // 空資料
+    
+    @IBOutlet weak var shopView: UIView!
+    @IBOutlet weak var reduceButton: UIButton!
+    @IBOutlet weak var increaseButton: UIButton!
+    @IBOutlet weak var addDrinkButton: UIButton!
+    @IBOutlet weak var drinkQuantityLabel: UILabel!
+    @IBOutlet weak var drinkPriceLabel: UILabel!
+    
+    
     var drinkMessage = drinkOrder(drinkName: "", size: ["",""], price: ["",""], caffeine: ["",""], heat: ["",""], sugar: ["",""], drinkImage: URL(filePath: ""), drinkInformation: "nil")
+    
+    var userDrinkOrder = userOrder(drinkName: "", size: "", price: "", caffeine: "", heat: "", sugar: "", drinkImage: URL(filePath: ""), quantity: "")
+    
+    
     
     var HeatText = "大卡"
     var CaffeineText = "毫克"
     var SugarText = "公克"
     var ButtonGap = 5
+    
+    var drinkQuantity = 1 // 飲料預設數量
+    var drinkPrice = 0 // 飲料價格
     
     // 初始化
     init?(coder: NSCoder, data: drinkOrder) {
@@ -94,6 +108,16 @@ class DrinkOrderViewController: UIViewController, UIScrollViewDelegate {
         drinkHeatLabel.text = "\(drinkMessage.heat[0])\(HeatText)"
         drinkCaffeineLabel.text = "\(drinkMessage.caffeine[0])\(CaffeineText)"
         drinkSugarLabel.text = "\(drinkMessage.sugar[0])\(SugarText)"
+        drinkPriceLabel.text = "\(drinkMessage.price[0])"
+        
+        drinkPrice = Int(drinkMessage.price[0]) ?? 0
+        userDrinkOrder.drinkName = "\(drinkMessage.drinkName)"
+        userDrinkOrder.size = "\(drinkMessage.size[0])"
+        userDrinkOrder.caffeine = "\(drinkMessage.caffeine[0])\(CaffeineText)"
+        userDrinkOrder.sugar = "\(drinkMessage.sugar[0])\(SugarText)"
+        userDrinkOrder.heat = "\(drinkMessage.heat[0])\(HeatText)"
+        userDrinkOrder.price = "\(drinkMessage.price[0])"
+        userDrinkOrder.drinkImage = drinkMessage.drinkImage
     }
     
     @objc func buttonAction(sender: UIButton!){
@@ -110,9 +134,77 @@ class DrinkOrderViewController: UIViewController, UIScrollViewDelegate {
                 drinkHeatLabel.text = "\(drinkMessage.heat[i])\(HeatText)"
                 drinkSugarLabel.text = "\(drinkMessage.sugar[i])\(SugarText)"
                 drinkCaffeineLabel.text = "\(drinkMessage.caffeine[i])\(CaffeineText)"
+                
+                drinkPrice = Int(drinkMessage.price[i]) ?? 0
+            }
+        }
+        
+        self.updateShopViewValue() //更新數據
+    }
+    
+
+    @IBAction func quantityAction(_ sender: UIButton) {
+        //print("\(sender.tag)")
+        switch sender.tag{
+        case 0:
+            print("減飲料")
+            if(drinkQuantity < 1){
+                drinkQuantity = 1
+            }else{
+                drinkQuantity -= 1
+            }
+            self.updateShopViewValue()//更新數據
+        case 1:
+            print("加飲料")
+            drinkQuantity += 1
+            self.updateShopViewValue()//更新數據
+        default:
+            print("nil")
+        }
+    }
+    
+    func updateShopViewValue(){
+        drinkQuantityLabel.text = String(drinkQuantity)
+        print("drinkPrice \(drinkPrice)")
+        print("drinkQuantity \(drinkQuantity)")
+        drinkPriceLabel.text = "\(drinkPrice * drinkQuantity)"
+        
+        userDrinkOrder.quantity = "\(drinkQuantity)" // 訂單飲料數量
+        userDrinkOrder.price = "\(drinkPrice * drinkQuantity)" // 訂單飲料總價
+    }
+    
+    @IBAction func addDrinkButtonAction(_ sender: Any) {
+        print("加入購物車")
+        
+        print("userDrinkOrder \(userDrinkOrder)")
+        //userOrderList.append(userDrinkOrder)
+        userOrderList.append(userDrinkOrder) // 儲存飲料清單
+        print("userOrderList \(userOrderList)")
+        
+        print(userOrderList.count)
+        
+        let orderFields = Order.Records.Fields(drinkName: userDrinkOrder.drinkName, size: userDrinkOrder.size, price: userDrinkOrder.price, caffeine: userDrinkOrder.caffeine, heat: userDrinkOrder.heat, sugar: userDrinkOrder.sugar, drinkImage: userDrinkOrder.drinkImage, quantity: userDrinkOrder.quantity)
+        let orderRecords = Order.Records(fields: orderFields)
+        let order = Order(records: [orderRecords])
+        
+        let uploadURL = URL(string: "https://api.airtable.com/v0/appYY0o7fiRNpJDPF/Order")!
+        let apiKey = "Bearer keyU9Ueumx1YzPC06"
+        let httpHeaderField = "Authorization"
+        let orderController = OrderController(url: uploadURL, apiKey: apiKey, header: httpHeaderField)
+        
+        print("order \(order)")
+        
+        orderController.uploadOrder(data: order){result in
+            switch result{
+            case .success(let result):
+                print("訂購成功 \(result)")
+            case .failure(_):
+                print("Error")
             }
         }
     }
+    
+    
     /*
     // MARK: - Navigation
 

@@ -10,7 +10,6 @@ import Kingfisher
 
 class DrinkDetailViewController: UIViewController, UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource {
 
-    var images = ["每日精選咖啡","冰每日精選咖啡","咖啡密斯朵"]
     var DrinkDetailKeyArray = [String]()
     
     @IBOutlet weak var drinkDetaiTableView: UITableView!
@@ -236,3 +235,5 @@ class DrinkDetailViewController: UIViewController, UIScrollViewDelegate,UITableV
     */
 
 }
+
+

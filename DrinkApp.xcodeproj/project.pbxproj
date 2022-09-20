@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		420B15BC28BE0574000B583B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 420B15BB28BE0574000B583B /* Kingfisher */; };
 		4228106128D04EB400C32CFC /* APIClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4228106028D04EB400C32CFC /* APIClass.swift */; };
+		42387B3128D0781C006195B0 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42387B3028D0781C006195B0 /* ShoppingCartViewController.swift */; };
+		42387B3328D07DE0006195B0 /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42387B3228D07DE0006195B0 /* ShoppingCartTableViewCell.swift */; };
 		425D6F2028B4ACD200A0E1DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D6F1F28B4ACD200A0E1DA /* AppDelegate.swift */; };
 		425D6F2228B4ACD200A0E1DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D6F2128B4ACD200A0E1DA /* SceneDelegate.swift */; };
 		425D6F2428B4ACD200A0E1DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D6F2328B4ACD200A0E1DA /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		4228106028D04EB400C32CFC /* APIClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClass.swift; sourceTree = "<group>"; };
+		42387B3028D0781C006195B0 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		42387B3228D07DE0006195B0 /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShoppingCartTableViewCell.swift; path = View/ShoppingCartTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		425D6F1C28B4ACD200A0E1DA /* DrinkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425D6F1F28B4ACD200A0E1DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		425D6F2128B4ACD200A0E1DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 				425D6F3328B4B04500A0E1DA /* DrinkListViewController.swift */,
 				4292E72128B5B15C00BE304E /* DrinkDetailViewController.swift */,
 				42B97B5728BF598B00D0BDE0 /* DrinkOrderViewController.swift */,
+				42387B3028D0781C006195B0 /* ShoppingCartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 				425D6F3528B4B10300A0E1DA /* DrinkListCell.swift */,
 				4297F13328B713F80076CB83 /* DrinkDetaiCell.swift */,
 				4292E72528B5BB5200BE304E /* ActivityTableViewCell.swift */,
+				42387B3228D07DE0006195B0 /* ShoppingCartTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,8 +218,10 @@
 				425D6F2228B4ACD200A0E1DA /* SceneDelegate.swift in Sources */,
 				42B97B5828BF598B00D0BDE0 /* DrinkOrderViewController.swift in Sources */,
 				425D6F3A28B4BEFE00A0E1DA /* DrinkListModel.swift in Sources */,
+				42387B3328D07DE0006195B0 /* ShoppingCartTableViewCell.swift in Sources */,
 				4292E72428B5B4F800BE304E /* FrontPageViewController.swift in Sources */,
 				4292E72228B5B15C00BE304E /* DrinkDetailViewController.swift in Sources */,
+				42387B3128D0781C006195B0 /* ShoppingCartViewController.swift in Sources */,
 				4228106128D04EB400C32CFC /* APIClass.swift in Sources */,
 				425D6F3428B4B04500A0E1DA /* DrinkListViewController.swift in Sources */,
 				4292E72628B5BB5200BE304E /* ActivityTableViewCell.swift in Sources */,
