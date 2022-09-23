@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// 讀取資料 ----------------------------
 // 第一層
 struct SearchResponse: Decodable{
     let records: [StoreItem]
@@ -39,6 +40,8 @@ struct ImageItem: Decodable
     let url:URL
     let filename:String
 }
+// 讀取資料 end ----------------------------
+
 
 struct drinkOrder{
     var drinkName:String
@@ -62,6 +65,7 @@ struct drinkOrder{
     }
 }
 
+
 struct userOrder{
     var drinkName:String
     var size:String
@@ -74,15 +78,15 @@ struct userOrder{
 }
 
 // 暫存用
-var userOrderList = Array<userOrder>()
+//var userOrderList = Array<userOrder>()
 
-// 上傳用
+// 上傳用 --------------------------
 struct Order:Codable{
     var records:[Records]
     struct Records:Codable{
         var fields:Fields
         struct Fields:Codable{
-            var drinkName:String
+            var orderName:String
             var size:String
             var price:String
             var caffeine:String
@@ -93,3 +97,24 @@ struct Order:Codable{
         }
     }
 }
+// 上傳用 end --------------------------
+
+// 修改用 --------------------------
+struct ReviseOrder:Codable{
+    var records:[Records]
+    struct Records:Codable{
+        var id:String
+        var fields:Fields
+        struct Fields:Codable{
+            var orderName:String
+            var size:String
+            var price:String
+            var caffeine:String
+            var heat:String
+            var sugar:String
+            var drinkImage:URL
+            var quantity:String
+        }
+    }
+}
+// 修改用 end --------------------------

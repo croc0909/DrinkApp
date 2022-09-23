@@ -16,22 +16,24 @@ class DrinkListViewController: UIViewController,UITableViewDelegate,UITableViewD
     var apiKey = "Bearer keyU9Ueumx1YzPC06"
     var httpHeaderField = "Authorization"
     
-    var drinkData = [StoreItem]() // 空資料
+    //var drinkData = [StoreItem]() // 空資料
     var drinkClassification = [String]() // 飲料類別
     var drinkClassUrl = [URL]()
     var drinkDataToNextPage = [StoreItem]() // 空資料
+    
+    let loadingClass = LoadingClass()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getUrl()
         self.tableViewInit()
+        
+        //let loadingVC = loadingClass.playLoadingAnimation()
+        //present(loadingVC, animated: true,completion: nil)
         // Do any additional setup after loading the view.
     }
     
     func getUrl(){
-        
-        //let urlClass = getUrlResponse(url: airtableUrl, apiKey: apiKey, header: httpHeaderField)
-        
         let url = URL(string: airtableUrl)!
         var request = URLRequest(url: url)
         // 設定 apiKey
@@ -46,7 +48,7 @@ class DrinkListViewController: UIViewController,UITableViewDelegate,UITableViewD
                     let SearchResponse = try decoder.decode(SearchResponse.self, from: data)
                     
                     for i in 0...(SearchResponse.records.count - 1){
-                        self.drinkData.append(SearchResponse.records[i])
+                        drinkData.append(SearchResponse.records[i])
                     }
                     self.updateMenu()
                 }catch{

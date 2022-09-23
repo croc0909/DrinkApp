@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		308D1ABB1A68DBF300ABEAAD /* Pods_DrinkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87908A866CAC9886612FACA3 /* Pods_DrinkApp.framework */; };
 		420B15BC28BE0574000B583B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 420B15BB28BE0574000B583B /* Kingfisher */; };
+		4216C5AF28DB01CB001C16F3 /* ReviseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216C5AE28DB01CB001C16F3 /* ReviseViewController.swift */; };
+		4216C5B128DB0D1A001C16F3 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216C5B028DB0D1A001C16F3 /* GlobalData.swift */; };
 		4228106128D04EB400C32CFC /* APIClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4228106028D04EB400C32CFC /* APIClass.swift */; };
 		42387B3128D0781C006195B0 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42387B3028D0781C006195B0 /* ShoppingCartViewController.swift */; };
 		42387B3328D07DE0006195B0 /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42387B3228D07DE0006195B0 /* ShoppingCartTableViewCell.swift */; };
@@ -24,10 +27,16 @@
 		4292E72428B5B4F800BE304E /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292E72328B5B4F800BE304E /* FrontPageViewController.swift */; };
 		4292E72628B5BB5200BE304E /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292E72528B5BB5200BE304E /* ActivityTableViewCell.swift */; };
 		4297F13428B713F90076CB83 /* DrinkDetaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297F13328B713F80076CB83 /* DrinkDetaiCell.swift */; };
+		429B986428D9A64E00862F4B /* DrinkOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429B986328D9A64E00862F4B /* DrinkOrderModel.swift */; };
+		42AE07A128DD901A00FB3C61 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE07A028DD901A00FB3C61 /* LoadingViewController.swift */; };
+		42AE07A428DD905D00FB3C61 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 42AE07A328DD905C00FB3C61 /* loading.json */; };
+		42AE07A828DD974500FB3C61 /* LoadingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE07A728DD974500FB3C61 /* LoadingClass.swift */; };
 		42B97B5828BF598B00D0BDE0 /* DrinkOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B97B5728BF598B00D0BDE0 /* DrinkOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4216C5AE28DB01CB001C16F3 /* ReviseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviseViewController.swift; path = Controller/ReviseViewController.swift; sourceTree = SOURCE_ROOT; };
+		4216C5B028DB0D1A001C16F3 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		4228106028D04EB400C32CFC /* APIClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClass.swift; sourceTree = "<group>"; };
 		42387B3028D0781C006195B0 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		42387B3228D07DE0006195B0 /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShoppingCartTableViewCell.swift; path = View/ShoppingCartTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -46,7 +55,14 @@
 		4292E72328B5B4F800BE304E /* FrontPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
 		4292E72528B5BB5200BE304E /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		4297F13328B713F80076CB83 /* DrinkDetaiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetaiCell.swift; sourceTree = "<group>"; };
+		429B986328D9A64E00862F4B /* DrinkOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkOrderModel.swift; sourceTree = "<group>"; };
+		42AE07A028DD901A00FB3C61 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingViewController.swift; path = Controller/LoadingViewController.swift; sourceTree = SOURCE_ROOT; };
+		42AE07A328DD905C00FB3C61 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = SOURCE_ROOT; };
+		42AE07A728DD974500FB3C61 /* LoadingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingClass.swift; sourceTree = SOURCE_ROOT; };
 		42B97B5728BF598B00D0BDE0 /* DrinkOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkOrderViewController.swift; sourceTree = "<group>"; };
+		87908A866CAC9886612FACA3 /* Pods_DrinkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrinkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7A625274E23EE2100CA087 /* Pods-DrinkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinkApp.release.xcconfig"; path = "Target Support Files/Pods-DrinkApp/Pods-DrinkApp.release.xcconfig"; sourceTree = "<group>"; };
+		DBE7C114D524FB31FE3A5CD6 /* Pods-DrinkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinkApp.debug.xcconfig"; path = "Target Support Files/Pods-DrinkApp/Pods-DrinkApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,15 +71,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				420B15BC28BE0574000B583B /* Kingfisher in Frameworks */,
+				308D1ABB1A68DBF300ABEAAD /* Pods_DrinkApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D512070D18EC782C563CB38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87908A866CAC9886612FACA3 /* Pods_DrinkApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4228106228D04F7300C32CFC /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				42AE07A728DD974500FB3C61 /* LoadingClass.swift */,
 				4228106028D04EB400C32CFC /* APIClass.swift */,
 			);
 			path = Class;
@@ -77,6 +103,8 @@
 				4292E72128B5B15C00BE304E /* DrinkDetailViewController.swift */,
 				42B97B5728BF598B00D0BDE0 /* DrinkOrderViewController.swift */,
 				42387B3028D0781C006195B0 /* ShoppingCartViewController.swift */,
+				4216C5AE28DB01CB001C16F3 /* ReviseViewController.swift */,
+				42AE07A028DD901A00FB3C61 /* LoadingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -84,12 +112,15 @@
 		425D6F1328B4ACD200A0E1DA = {
 			isa = PBXGroup;
 			children = (
+				42AE07A228DD904700FB3C61 /* Lottie */,
 				425D6F3828B4B12400A0E1DA /* Model */,
 				425D6F3728B4B11300A0E1DA /* View */,
 				4228106228D04F7300C32CFC /* Class */,
 				4228106328D04F8B00C32CFC /* Controller */,
 				425D6F1E28B4ACD200A0E1DA /* DrinkApp */,
 				425D6F1D28B4ACD200A0E1DA /* Products */,
+				9231BCCA6BBA866A23015573 /* Pods */,
+				3D512070D18EC782C563CB38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,8 +161,27 @@
 			isa = PBXGroup;
 			children = (
 				425D6F3928B4BEFE00A0E1DA /* DrinkListModel.swift */,
+				429B986328D9A64E00862F4B /* DrinkOrderModel.swift */,
+				4216C5B028DB0D1A001C16F3 /* GlobalData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		42AE07A228DD904700FB3C61 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				42AE07A328DD905C00FB3C61 /* loading.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		9231BCCA6BBA866A23015573 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBE7C114D524FB31FE3A5CD6 /* Pods-DrinkApp.debug.xcconfig */,
+				AF7A625274E23EE2100CA087 /* Pods-DrinkApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 425D6F3028B4ACD300A0E1DA /* Build configuration list for PBXNativeTarget "DrinkApp" */;
 			buildPhases = (
+				FE85BDCA50A8C5E4AB53DDC7 /* [CP] Check Pods Manifest.lock */,
 				425D6F1828B4ACD200A0E1DA /* Sources */,
 				425D6F1928B4ACD200A0E1DA /* Frameworks */,
 				425D6F1A28B4ACD200A0E1DA /* Resources */,
+				5A2CD907323CAA02055624C5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,12 +251,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				425D6F2C28B4ACD300A0E1DA /* LaunchScreen.storyboard in Resources */,
+				42AE07A428DD905D00FB3C61 /* loading.json in Resources */,
 				425D6F2928B4ACD300A0E1DA /* Assets.xcassets in Resources */,
 				425D6F2728B4ACD200A0E1DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A2CD907323CAA02055624C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrinkApp/Pods-DrinkApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrinkApp/Pods-DrinkApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrinkApp/Pods-DrinkApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE85BDCA50A8C5E4AB53DDC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DrinkApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		425D6F1828B4ACD200A0E1DA /* Sources */ = {
@@ -213,9 +308,14 @@
 			files = (
 				425D6F2428B4ACD200A0E1DA /* ViewController.swift in Sources */,
 				425D6F3628B4B10300A0E1DA /* DrinkListCell.swift in Sources */,
+				4216C5AF28DB01CB001C16F3 /* ReviseViewController.swift in Sources */,
+				42AE07A828DD974500FB3C61 /* LoadingClass.swift in Sources */,
 				4297F13428B713F90076CB83 /* DrinkDetaiCell.swift in Sources */,
+				429B986428D9A64E00862F4B /* DrinkOrderModel.swift in Sources */,
+				42AE07A128DD901A00FB3C61 /* LoadingViewController.swift in Sources */,
 				425D6F2028B4ACD200A0E1DA /* AppDelegate.swift in Sources */,
 				425D6F2228B4ACD200A0E1DA /* SceneDelegate.swift in Sources */,
+				4216C5B128DB0D1A001C16F3 /* GlobalData.swift in Sources */,
 				42B97B5828BF598B00D0BDE0 /* DrinkOrderViewController.swift in Sources */,
 				425D6F3A28B4BEFE00A0E1DA /* DrinkListModel.swift in Sources */,
 				42387B3328D07DE0006195B0 /* ShoppingCartTableViewCell.swift in Sources */,
@@ -366,6 +466,7 @@
 		};
 		425D6F3128B4ACD300A0E1DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBE7C114D524FB31FE3A5CD6 /* Pods-DrinkApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -393,6 +494,7 @@
 		};
 		425D6F3228B4ACD300A0E1DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF7A625274E23EE2100CA087 /* Pods-DrinkApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
